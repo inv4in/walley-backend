@@ -14,5 +14,8 @@ list(
   auxiliary
 )
 
-add_library(walley ${walley_SRC})
+add_library(walley SHARED ${walley_SRC})
 target_link_libraries(walley ${walley_LIBS})
+
+install(TARGETS walley DESTINATION lib)
+install(FILES walley.hpp DESTINATION include)
